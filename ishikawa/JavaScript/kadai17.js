@@ -6,7 +6,6 @@ $(function () {
       date: $('#image-date').val(),
       api_key: apiKey
     };
-    console.log(param);
     // AjaxによりWeb APIを呼び出す処理
     $.ajax({
       type: 'GET',                                    // GETで送信
@@ -16,7 +15,7 @@ $(function () {
     })
     .done(function (res) {
       // 成功した場合
-      console.log(res.core);        // レスポンスフィールドの内容
+      console.log(res);        // レスポンスフィールドの内容
       $('#apod-image').attr('src', res.url);
       $('#apod-title').html(res.title);
       $('#apod-desc').html(res.explanation);
