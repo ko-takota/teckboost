@@ -1,13 +1,13 @@
 class CountButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { count: 10};
+        this.state = { count: 100};
     }
 
     render() {
         let count = this.state.count -1;
         if (count < 0) {
-            count = 10;
+            count = 100;
         }
         return React.createElement(
             "button",
